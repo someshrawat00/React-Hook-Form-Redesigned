@@ -5,8 +5,7 @@ import Form from './Form'
 function App() {
 
   return (
-    <div className='w-full h-screen flex items-center justify-center bg-hero-image bg-cover backdrop-blur-lg'>
-        <div className="absolute w-full h-full overflow-hidden z-[-1] backdrop-blur-lg"></div>
+    <div className=" box-border font-['Poppins'] w-full h-screen flex items-center justify-center bg-hero-image bg-cover ">
         <Form />
     </div>
   )

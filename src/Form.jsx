@@ -11,23 +11,29 @@ function Form() {
   
 
   return (
-    <div className=' z-1 subpixel-antialiased font-sans md:max-w-7xl w-full lg:h-[800px]  h-5/6 flex border '>
-        <div className="bg-gray-50 flex flex-col gap-2 items-center  justify-center flex-wrap md:w-1/2 w-full">
-           <h1 className='text-3xl font-bold text-gray-700 '>Sign Up</h1>
-           <p className='font-medium text-gray-500 text-xl mb-10'> Create a new account</p>
-            
-            <form onSubmit={handleSubmit(signUp)} className='w-full px-[100px]  flex flex-col gap-5'>
-                <Input placeholder = {"username"} {...register("name")}></Input>
-                <Input placeholder = {"email"} type = {"email"} {...register("email")}></Input>
-                <Input placeholder = {"password"} type = {"password"} {...register("password")}></Input>
-                <button type='submit' className='bg-blue-500 py-4 text-white font-medium'>Sign up</button>
-            </form>
-
+      <div className="max-w-[440px] bg-[rgba(255,255,255,.5)] backdrop-blur-2xl rounded-[8%] p-11 flex flex-col justify-between items-center">
+        <div className="flex w-full justify-between mb-12 items-center">
+           <h1 className='text-lg font-light text-gray-700'>Cannabis Lab</h1>
+           <h1 className='text-lg cursor-pointer'>Sign up</h1>
         </div>
-        <div className="md:block hidden flex flex-wrap overflow-hidden w-1/2">
-          <img src="./img.jpg" className='w-full h-full' alt="" />
-        </div>
-    </div>
+        <form className="" onSubmit={handleSubmit(signUp)}>
+          <div className="flex w-full justify-between mb-8 items-center">
+            <h1 className='text-2xl font-medium'>Log In</h1>
+            <div className="px-4 py-2 rounded-full border border-gray-500 text-xs cursor-pointer">Facebook</div>
+          </div>
+          <div className="mb-6">
+            <Input placeholder = "e-mail address" type= "email" {...register("email")}/>
+          </div>
+          <div className="mb-10">
+            <Input placeholder = "password" type = "password" btntext = "I&nbsp;forgot" btn = "true" {...register("password")}/>
+          </div>
+          <div className="flex justify-between mb-10">
+            <p className='text-xs text-gray-800 w-9/12'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae error porro delectus qui</p>
+            <button type='submit' className="p-3 bg-black text-white rounded-full cursor-pointer">Go</button>
+          </div>
+        </form>
+        <div className="">Please consume responsibly!</div>
+      </div>
   )
 }
 
